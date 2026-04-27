@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="A 7-day, science-based trading roadmap for absolute beginners. Forex, ETFs, and Stocks. Demo accounts only. No hype." />
+<title>Slow Capital — Learn to Trade Without Losing Money Learning</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,30..100,0..1;1,9..144,300..900,30..100,0..1&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0A0D0E;
+    --bg-soft: #0F1314;
+    --surface: #131718;
+    --surface-2: #1A1F21;
+    --surface-3: #232A2D;
+    --border: rgba(244, 241, 235, 0.08);
+    --border-strong: rgba(244, 241, 235, 0.16);
+    --text: #F4F1EB;
+    --text-muted: #A0A7AA;
+    --text-dim: #6B7174;
+    --accent: #C9D6A0;
+    --accent-soft: rgba(201, 214, 160, 0.12);
+    --accent-warm: #D4A574;
+    --accent-warm-soft: rgba(212, 165, 116, 0.10);
+    --green: #6BB77B;
+    --red: #E07A6B;
+    --display: 'Fraunces', Georgia, serif;
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --maxw: 1240px;
+    --pad-x: clamp(1.25rem, 5vw, 4rem);
+    --section-y: clamp(4rem, 10vh, 7rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent-warm); color: var(--bg); }
+
+  /* Background atmosphere */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(212, 165, 116, 0.04), transparent 60%),
+      radial-gradient(ellipse 60% 60% at 90% 100%, rgba(201, 214, 160, 0.03), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+    z-index: 1;
+  }
+
+  main, header, footer { position: relative; z-index: 2; }
+
+  /* Typography */
+  h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; margin: 0; font-variation-settings: "SOFT" 30, "WONK" 0; }
+  .display-xl { font-size: clamp(2.75rem, 8vw, 6.5rem); font-weight: 350; }
+  .display-lg { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 400; }
+  .display-md { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 400; }
+  .display-sm { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 500; }
+  .italic { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; }
+  .num { font-family: var(--mono); font-feature-settings: "tnum"; letter-spacing: -0.02em; }
+  p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* Layout */
+  .container { max-width: var(--maxw); margin-inline: auto; padding-inline: var(--pad-x); }
+  section { padding-block: var(--section-y); position: relative; }
+
+  /* Header */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    background: rgba(10, 13, 14, 0.72);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--display);
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+  .brand-mark {
+    width: 28px; height: 28px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--accent-warm), #B8895A);
+    display: grid; place-items: center;
+    color: var(--bg);
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  .nav-links { display: none; gap: 2rem; }
+  .nav-links a { color: var(--text-muted); font-size: 0.93rem; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  @media (min-width: 880px) { .nav-links { display: flex; } }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .btn-primary:hover {
+    background: var(--accent-warm);
+    transform: translateY(-1px);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+  .btn-ghost:hover {
+    border-color: var(--text);
+  }
+  .btn-sm { padding: 0.6rem 1.1rem; font-size: 0.85rem; }
+  .arrow { transition: transform 0.25s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* HERO */
+  .hero {
+    padding-block: clamp(4rem, 12vh, 8rem) clamp(3rem, 8vh, 5rem);
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: end;
+  }
+  @media (min-width: 980px) {
+    .hero-grid { grid-template-columns: 1.3fr 1fr; gap: 5rem; }
+  }
+  .hero-headline {
+    font-size: clamp(2.5rem, 7.5vw, 5.75rem);
+    font-weight: 350;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.75rem;
+  }
+  .hero-headline .accent {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+    color: var(--accent-warm);
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: var(--text-muted);
+    max-width: 36ch;
+    line-height: 1.55;
+    margin-bottom: 2.25rem;
+  }
+  .hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-trust {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+  .hero-trust span { color: var(--text-muted); }
+
+  /* Hero visual: an editorial chart-into-path SVG */
+  .hero-art {
+    position: relative;
+    aspect-ratio: 1 / 1.05;
+    max-width: 460px;
+    margin-left: auto;
+    width: 100%;
+  }
+  .hero-art svg { width: 100%; height: 100%; }
+  .hero-stat {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+  }
+  .hero-stat-num { font-family: var(--display); font-size: 2rem; font-weight: 400; line-height: 1; }
+  .hero-stat-label { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 0.4rem; }
+
+  /* PAIN block */
+  .pain-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  .pain-stat-num {
+    font-family: var(--display);
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-weight: 350;
+    line-height: 0.9;
+    color: var(--accent-warm);
+    font-variation-settings: "SOFT" 50, "WONK" 0;
+  }
+  .pain-stat-text {
+    flex: 1;
+    min-width: 280px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 50ch;
+  }
+  .pain-stat-text strong { color: var(--text); font-weight: 500; }
+  .pain-cards { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  @media (min-width: 720px) { .pain-cards { grid-template-columns: repeat(3, 1fr); } }
+  .pain-card { background: var(--bg); padding: 2rem; }
+  .pain-card-num { font-family: var(--mono); color: var(--text-dim); font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 1rem; }
+  .pain-card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.15; }
+  .pain-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+  /* Asset classes */
+  .asset-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-top: 3rem; }
+  @media (min-width: 820px) { .asset-grid { grid-template-columns: repeat(3, 1fr); } }
+  .asset-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .asset-card:hover { border-color: var(--border-strong); transform: translateY(-4px); }
+  .asset-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--surface-2);
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+  }
+  .asset-card h3 { font-size: 1.65rem; }
+  .asset-card .difficulty {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: -0.5rem;
+  }
+  .asset-card ul { list-style: none; padding: 0; margin: 0.5rem 0 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .asset-card li { color: var(--text-muted); font-size: 0.92rem; padding-left: 1.25rem; position: relative; }
+  .asset-card li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.7em;
+    width: 8px; height: 1px;
+    background: var(--text-dim);
+  }
+  .asset-card .arrow-link {
+    color: var(--accent-warm);
+    font-size: 0.88rem;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 500;
+  }
+
+  /* Roadmap */
+  .roadmap {
+    background: var(--bg-soft);
+    margin-inline: calc(-1 * var(--pad-x));
+    padding-inline: var(--pad-x);
+    border-block: 1px solid var(--border);
+  }
+  .roadmap-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  @media (min-width: 880px) { .roadmap-header { grid-template-columns: 1.2fr 1fr; align-items: end; gap: 4rem; } }
+  .roadmap-intro p { color: var(--text-muted); max-width: 46ch; font-size: 1.02rem; }
+  .day-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--border);
+  }
+  @media (min-width: 720px) { .day-grid { grid-template-columns: repeat(7, 1fr); } }
+  .day {
+    padding: 1.5rem 1.25rem 1.75rem;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.25s;
+    position: relative;
+  }
+  @media (min-width: 720px) {
+    .day { border-bottom: none; border-right: 1px solid var(--border); padding-block: 2.5rem; }
+    .day:last-child { border-right: none; }
+  }
+  .day:hover { background: var(--surface); }
+  .day-num {
+    font-family: var(--display);
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-weight: 350;
+    line-height: 1;
+    margin-bottom: 0.85rem;
+    color: var(--text);
+    font-variation-settings: "SOFT" 50, "WONK" 0;
+  }
+  .day-num .slash { color: var(--text-dim); }
+  .day-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.6rem;
+  }
+  .day h4 {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text);
+    letter-spacing: 0;
+  }
+  .day p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.45; }
+
+  /* Tools */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  @media (min-width: 980px) { .tools-grid { grid-template-columns: 1fr 1fr; } }
+
+  .tool {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  .tool-header { margin-bottom: 1.75rem; }
+  .tool h3 { font-size: 1.6rem; margin-top: 0.5rem; }
+  .tool-sub { color: var(--text-muted); font-size: 0.92rem; margin-top: 0.5rem; }
+
+  /* Calculator */
+  .calc-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .field { display: flex; flex-direction: column; gap: 0.4rem; }
+  .field label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .field input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  .field input:focus {
+    outline: none;
+    border-color: var(--accent-warm);
+  }
+  .calc-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .calc-stat-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+  .calc-stat-value {
+    font-family: var(--display);
+    font-size: 1.85rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text);
+  }
+  .calc-stat-value.highlight { color: var(--accent-warm); }
+
+  /* Quiz */
+  .quiz-question { font-family: var(--display); font-size: 1.4rem; line-height: 1.25; margin-bottom: 1.25rem; min-height: 3em; }
+  .quiz-options { display: flex; flex-direction: column; gap: 0.75rem; }
+  .quiz-option {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .quiz-option:hover { border-color: var(--border-strong); background: var(--surface-2); }
+  .quiz-option.selected { border-color: var(--accent-warm); background: var(--accent-warm-soft); }
+  .quiz-option-letter {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    width: 1.5rem;
+    flex-shrink: 0;
+  }
+  .quiz-progress {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .quiz-result {
+    padding: 1.5rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display: none;
+  }
+  .quiz-result.show { display: block; }
+  .quiz-result-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .quiz-result-name { font-family: var(--display); font-size: 2rem; color: var(--accent-warm); margin-bottom: 0.75rem; }
+  .quiz-result-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+
+  /* Author / E-E-A-T */
+  .author-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+    padding: 3rem;
+    background: var(--surface);
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+  @media (min-width: 880px) {
+    .author-section { grid-template-columns: 280px 1fr; gap: 4rem; }
+  }
+  .author-portrait {
+    aspect-ratio: 1 / 1.2;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--surface-2), var(--surface-3));
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .author-portrait svg { width: 50%; height: 50%; opacity: 0.7; }
+  .author-portrait::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(212,165,116,0.08), transparent 60%);
+  }
+  .author-credentials {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .credential {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    padding-block: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92rem;
+  }
+  .credential:last-child { border-bottom: none; }
+  .credential-key { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; min-width: 90px; }
+  .credential-val { color: var(--text-muted); flex: 1; }
+
+  /* FAQ */
+  .faq { max-width: 820px; margin-inline: auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding-block: 1.5rem;
+  }
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: var(--display);
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    line-height: 1.3;
+    padding: 0;
+  }
+  .faq-toggle {
+    width: 24px; height: 24px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+    font-family: var(--mono);
+    font-size: 1.25rem;
+  }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); color: var(--accent-warm); }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, margin 0.4s ease;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+  .faq-item.open .faq-answer { max-height: 500px; margin-top: 1rem; }
+
+  /* Final CTA */
+  .final-cta {
+    text-align: center;
+    padding-block: clamp(5rem, 12vh, 8rem);
+    border-top: 1px solid var(--border);
+  }
+  .final-cta h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    max-width: 18ch;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+  }
+  .final-cta p { color: var(--text-muted); max-width: 45ch; margin-inline: auto; margin-bottom: 2rem; }
+  .signup-form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 480px;
+    margin-inline: auto;
+    flex-wrap: wrap;
+  }
+  .signup-form input {
+    flex: 1;
+    min-width: 220px;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    padding: 0.95rem 1.5rem;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+  }
+  .signup-form input:focus { outline: none; border-color: var(--accent-warm); }
+  .signup-disclaimer { font-family: var(--mono); font-size: 0.72rem; color: var(--text-dim); margin-top: 1rem; letter-spacing: 0.04em; }
+
+  /* Footer */
+  footer.site {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--border);
+    padding-block: 4rem 2rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 720px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+  .footer-col h5 {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin: 0 0 1rem;
+    font-weight: 500;
+  }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--text); }
+  .footer-tagline {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    line-height: 1.2;
+    max-width: 26ch;
+    color: var(--text);
+    margin-top: 0.75rem;
+  }
+  .risk-disclosure {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 2rem;
+  }
+  .risk-disclosure strong { color: var(--text); font-weight: 500; }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+
+  /* Section labels */
+  .section-label {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-label-num { font-family: var(--mono); font-size: 0.78rem; color: var(--text-dim); letter-spacing: 0.12em; }
+  .section-title { max-width: 22ch; margin-bottom: 1rem; }
+  .section-intro { color: var(--text-muted); max-width: 50ch; font-size: 1.02rem; }
+
+  /* Subtle reveal on load */
+  .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Modal for day detail */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10,13,14,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .modal-backdrop.show { display: flex; }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 20px;
+    max-width: 640px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    width: 36px; height: 36px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    transition: all 0.2s;
+  }
+  .modal-close:hover { color: var(--text); border-color: var(--border-strong); }
+  .modal-eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 0.75rem; }
+  .modal h3 { font-size: 2rem; margin-bottom: 1rem; line-height: 1.1; }
+  .modal-body { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+  .modal-body p { margin-bottom: 1rem; }
+  .modal-body strong { color: var(--text); font-weight: 500; }
+  .modal-body ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+  .modal-body li { margin-bottom: 0.4rem; }
+
+  /* Cookie / risk banner */
+  .sticky-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    z-index: 60;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    backdrop-filter: blur(20px);
+    background: rgba(19, 23, 24, 0.94);
+    max-width: 1080px;
+    margin-inline: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  }
+  .sticky-banner.hide { display: none; }
+  .sticky-banner-text { flex: 1; min-width: 240px; }
+  .sticky-banner-text strong { color: var(--text); font-weight: 500; }
+
+  @media (max-width: 600px) {
+    .calc-form { grid-template-columns: 1fr; }
+    .calc-result { grid-template-columns: 1fr; }
+    .author-section { padding: 2rem 1.5rem; }
+    .modal { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="container nav">
+    <a href="#" class="brand">
+      <span class="brand-mark">S</span>
+      <span>Slow Capital</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#learn">Learn</a>
+      <a href="#tools">Tools</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#final-cta" class="btn btn-primary btn-sm">Start free roadmap <span class="arrow">→</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow reveal" style="margin-bottom: 1.25rem;">A 7-day science-based roadmap</div>
+        <h1 class="hero-headline reveal" style="transition-delay:.05s">
+          Learn to trade<br>
+          forex, ETFs &amp; stocks<br>
+          <span class="accent">without losing money</span><br>
+          learning.
+        </h1>
+        <p class="hero-sub reveal" style="transition-delay:.15s">
+          Built for absolute beginners by an economics student. Demo accounts only. No paid signals, no hype, no $5,000 mentorship upsell. Just the work, sequenced properly.
+        </p>
+        <div class="hero-cta-row reveal" style="transition-delay:.25s">
+          <a href="#final-cta" class="btn btn-primary">Start the free 7-day roadmap <span class="arrow">→</span></a>
+          <a href="#learn" class="btn btn-ghost">Browse free lessons</a>
+        </div>
+        <div class="hero-trust reveal" style="transition-delay:.35s">
+          GDPR-compliant <span>·</span> No credit card <span>·</span> ~10 min/day <span>·</span> 100% free
+        </div>
+      </div>
+
+      <div class="hero-art reveal" style="transition-delay:.4s">
+        <svg viewBox="0 0 460 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- frame -->
+          <rect x="1" y="1" width="458" height="478" rx="20" stroke="rgba(244,241,235,0.08)" />
+          <!-- gridlines -->
+          <g stroke="rgba(244,241,235,0.04)" stroke-width="1">
+            <line x1="40" y1="80" x2="420" y2="80" />
+            <line x1="40" y1="160" x2="420" y2="160" />
+            <line x1="40" y1="240" x2="420" y2="240" />
+            <line x1="40" y1="320" x2="420" y2="320" />
+            <line x1="40" y1="400" x2="420" y2="400" />
+          </g>
+          <!-- candlesticks (chaotic early) -->
+          <g>
+            <line x1="60" y1="200" x2="60" y2="280" stroke="#A0A7AA" stroke-width="1"/>
+            <rect x="55" y="220" width="10" height="40" fill="#E07A6B"/>
+
+            <line x1="80" y1="180" x2="80" y2="290" stroke="#A0A7AA" stroke-width="1"/>
+            <rect x="75" y="200" width="10" height="60" fill="#6BB77B"/>
+
+            <line x1="100" y1="220" x2="100" y2="320" stroke="#A0A7AA" stroke-width="1"/>
+            <rect x="95" y="250" width="10" height="50" fill="#E07A6B"/>
+
+            <line x1="120" y1="200" x2="120" y2="310" stroke="#A0A7AA" stroke-width="1"/>
+            <rect x="115" y="230" width="10" height="55" fill="#6BB77B"/>
+
+            <line x1="140" y1="180" x2="140" y2="280" stroke="#A0A7AA" stroke-width="1"/>
+            <rect x="135" y="210" width="10" height="45" fill="#E07A6B"/>
+
+            <line x1="160" y1="170" x2="160" y2="260" stroke="#A0A7AA" stroke-width="1"/>
+            <rect x="155" y="190" width="10" height="50" fill="#6BB77B"/>
+          </g>
+          <!-- transition arrow -->
+          <path d="M 200 230 Q 240 230 270 200" stroke="#D4A574" stroke-width="1.5" stroke-dasharray="3 4" fill="none"/>
+          <!-- ascending learning path -->
+          <path d="M 200 230 L 240 220 L 280 200 L 320 175 L 360 150 L 400 120" stroke="#D4A574" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- path waypoints (the 7 days) -->
+          <g fill="#D4A574">
+            <circle cx="240" cy="220" r="4" />
+            <circle cx="280" cy="200" r="4" />
+            <circle cx="320" cy="175" r="4" />
+            <circle cx="360" cy="150" r="4" />
+            <circle cx="400" cy="120" r="4" />
+          </g>
+          <g fill="rgba(212,165,116,0.2)">
+            <circle cx="240" cy="220" r="10" />
+            <circle cx="280" cy="200" r="10" />
+            <circle cx="320" cy="175" r="10" />
+            <circle cx="360" cy="150" r="10" />
+            <circle cx="400" cy="120" r="10" />
+          </g>
+          <!-- labels -->
+          <text x="240" y="245" fill="#A0A7AA" font-family="JetBrains Mono" font-size="9" text-anchor="middle">D1</text>
+          <text x="280" y="225" fill="#A0A7AA" font-family="JetBrains Mono" font-size="9" text-anchor="middle">D3</text>
+          <text x="320" y="200" fill="#A0A7AA" font-family="JetBrains Mono" font-size="9" text-anchor="middle">D5</text>
+          <text x="360" y="175" fill="#A0A7AA" font-family="JetBrains Mono" font-size="9" text-anchor="middle">D6</text>
+          <text x="400" y="145" fill="#D4A574" font-family="JetBrains Mono" font-size="9" text-anchor="middle">D7</text>
+
+          <!-- caption -->
+          <text x="60" y="430" fill="#6B7174" font-family="JetBrains Mono" font-size="10">From noise →</text>
+          <text x="400" y="430" fill="#D4A574" font-family="JetBrains Mono" font-size="10" text-anchor="end">→ to signal</text>
+
+          <!-- frame label -->
+          <text x="40" y="55" fill="#A0A7AA" font-family="Fraunces" font-style="italic" font-size="14">The beginner's path</text>
+        </svg>
+        <div class="hero-stat">
+          <div class="hero-stat-num num">7<span style="color:var(--text-dim)">/</span>days</div>
+          <div class="hero-stat-label">to your first informed paper trade</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section id="why" class="container">
+  <div class="section-label">
+    <div class="section-label-num">01 / WHY</div>
+    <div class="eyebrow">The honest case</div>
+  </div>
+  <h2 class="section-title display-lg">Most beginners lose money. The reasons are <span class="italic" style="color:var(--accent-warm)">predictable.</span></h2>
+  <div class="pain-stat" style="margin-top: 3rem;">
+    <div class="pain-stat-num">74–89%</div>
+    <p class="pain-stat-text">of retail CFD accounts lose money, according to <strong>ESMA</strong>. Most retail traders fund a live account on day one, copy a strategy from YouTube, ignore position sizing, and blow up within three months. This is not a personality problem. It is a sequencing problem.</p>
+  </div>
+
+  <div class="pain-cards">
+    <div class="pain-card">
+      <div class="pain-card-num">01</div>
+      <h3>They start with real money.</h3>
+      <p>Demo accounts replicate market conditions at zero financial cost. Skipping demo means paying tuition with real capital — and the tuition is brutal.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-card-num">02</div>
+      <h3>They trade strategies before risk rules.</h3>
+      <p>Position sizing, stop-loss discipline, and the 1% rule decide outcomes. Strategy decides which trades — but risk rules decide whether you survive long enough for strategy to matter.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-card-num">03</div>
+      <h3>They learn from people selling them something.</h3>
+      <p>Most "free" courses are funnels for €2,000 trading rooms. The incentive is enrollment, not your performance. We have nothing to upsell.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU'LL LEARN -->
+<section id="learn" class="container">
+  <div class="section-label">
+    <div class="section-label-num">02 / SCOPE</div>
+    <div class="eyebrow">Three asset classes</div>
+  </div>
+  <h2 class="section-title display-lg">What you'll actually learn.</h2>
+  <p class="section-intro">Each path is sequenced from foundational concepts to first paper trade. Pick the one that matches your risk profile and time horizon — or take the asset-class quiz below if you're unsure.</p>
+
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4A574" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+      </div>
+      <div class="difficulty">Difficulty · Hardest</div>
+      <h3>Forex</h3>
+      <ul>
+        <li>How currency pairs and pips actually work</li>
+        <li>Leverage: the math, the danger, the ESMA limits</li>
+        <li>Why 24-hour markets exhaust beginners</li>
+        <li>The risk-management framework that keeps you alive</li>
+      </ul>
+      <a href="#" class="arrow-link">Start the Forex path <span>→</span></a>
+    </div>
+
+    <div class="asset-card">
+      <div class="asset-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9D6A0" stroke-width="1.5"><path d="M3 18l5-7 4 5 4-9 5 11"/><path d="M3 21h18"/></svg>
+      </div>
+      <div class="difficulty">Difficulty · Medium</div>
+      <h3>Stocks</h3>
+      <ul>
+        <li>Ownership, dividends, and what shares actually represent</li>
+        <li>Reading earnings reports without an MBA</li>
+        <li>Time-horizon thinking that beats day-trading 9 in 10</li>
+        <li>Selecting your first three positions</li>
+      </ul>
+      <a href="#" class="arrow-link">Start the Stocks path <span>→</span></a>
+    </div>
+
+    <div class="asset-card">
+      <div class="asset-card-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6BB77B" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </div>
+      <div class="difficulty">Difficulty · Easiest</div>
+      <h3>ETFs</h3>
+      <ul>
+        <li>Diversification done in a single ticker</li>
+        <li>Index ETFs vs. thematic vs. sector — when each works</li>
+        <li>TER, tracking difference, and fees that actually matter</li>
+        <li>Sparpläne (savings plans) for compounding without effort</li>
+      </ul>
+      <a href="#" class="arrow-link">Start the ETF path <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="roadmap">
+  <div class="container">
+    <div class="roadmap-header">
+      <div>
+        <div class="section-label">
+          <div class="section-label-num">03 / METHOD</div>
+          <div class="eyebrow">The 7-day roadmap</div>
+        </div>
+        <h2 class="display-lg" style="max-width:18ch">From zero to your first <span class="italic" style="color:var(--accent-warm)">documented</span> paper trade — in seven days.</h2>
+      </div>
+      <div class="roadmap-intro">
+        <p>Each day is approximately ten minutes of reading and one concrete action. By Day 7, you have an open demo account, an executed paper trade with full journal entry, and a written trading plan. Tap any day for details.</p>
+      </div>
+    </div>
+
+    <div class="day-grid">
+      <div class="day" data-day="1">
+        <div class="day-num"><span class="num">01</span></div>
+        <div class="day-label">Foundations</div>
+        <h4>How markets actually work</h4>
+        <p>Bid, ask, spread, liquidity — what every chart hides.</p>
+      </div>
+      <div class="day" data-day="2">
+        <div class="day-num"><span class="num">02</span></div>
+        <div class="day-label">Choose</div>
+        <h4>Pick your asset class</h4>
+        <p>Forex, ETFs, or stocks. Match it to your life, not the hype.</p>
+      </div>
+      <div class="day" data-day="3">
+        <div class="day-num"><span class="num">03</span></div>
+        <div class="day-label">Open</div>
+        <h4>A regulated demo account</h4>
+        <p>Why regulation matters and how to verify it in two minutes.</p>
+      </div>
+      <div class="day" data-day="4">
+        <div class="day-num"><span class="num">04</span></div>
+        <div class="day-label">Read</div>
+        <h4>Charts, with intent</h4>
+        <p>Candlesticks, trend, support and resistance — only the essentials.</p>
+      </div>
+      <div class="day" data-day="5">
+        <div class="day-num"><span class="num">05</span></div>
+        <div class="day-label">Protect</div>
+        <h4>Risk management</h4>
+        <p>The 1% rule, position sizing, stop-loss. The day that decides everything.</p>
+      </div>
+      <div class="day" data-day="6">
+        <div class="day-num"><span class="num">06</span></div>
+        <div class="day-label">Execute</div>
+        <h4>Your first paper trade</h4>
+        <p>Thesis, entry, stop, target, journal entry. End to end.</p>
+      </div>
+      <div class="day" data-day="7">
+        <div class="day-num"><span class="num">07</span></div>
+        <div class="day-label">Plan</div>
+        <h4>Your real-money trading plan</h4>
+        <p>Graduation criteria from demo to live. The honest path to the first $100.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools" class="container">
+  <div class="section-label">
+    <div class="section-label-num">04 / TOOLS</div>
+    <div class="eyebrow">Try them now</div>
+  </div>
+  <h2 class="section-title display-lg">Two of the tools <span class="italic">embedded</span> in the roadmap.</h2>
+  <p class="section-intro">The Position Size Calculator is the single most important tool in this roadmap. The Asset Class Quiz routes you to the right starting point in under a minute.</p>
+
+  <div class="tools-grid">
+
+    <!-- POSITION SIZE CALC -->
+    <div class="tool">
+      <div class="tool-header">
+        <div class="eyebrow">Day 5 · Risk management</div>
+        <h3>Position Size Calculator</h3>
+        <p class="tool-sub">Never enter a trade without computing this. The math that separates survivors from beginners.</p>
+      </div>
+
+      <div class="calc-form">
+        <div class="field">
+          <label for="acct">Account size (€)</label>
+          <input id="acct" type="number" value="1000" min="0" step="any" inputmode="decimal" />
+        </div>
+        <div class="field">
+          <label for="risk">Risk per trade (%)</label>
+          <input id="risk" type="number" value="1" min="0" max="100" step="any" inputmode="decimal" />
+        </div>
+        <div class="field">
+          <label for="entry">Entry price (€)</label>
+          <input id="entry" type="number" value="50" min="0" step="any" inputmode="decimal" />
+        </div>
+        <div class="field">
+          <label for="stop">Stop-loss price (€)</label>
+          <input id="stop" type="number" value="48" min="0" step="any" inputmode="decimal" />
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div>
+          <div class="calc-stat-label">Max loss</div>
+          <div class="calc-stat-value num" id="maxLoss">€10.00</div>
+        </div>
+        <div>
+          <div class="calc-stat-label">Position size</div>
+          <div class="calc-stat-value num highlight" id="posSize">5 units</div>
+        </div>
+        <div>
+          <div class="calc-stat-label">Stop distance</div>
+          <div class="calc-stat-value num" id="stopDist">€2.00</div>
+        </div>
+        <div>
+          <div class="calc-stat-label">Total exposure</div>
+          <div class="calc-stat-value num" id="exposure">€250.00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASSET CLASS QUIZ -->
+    <div class="tool">
+      <div class="tool-header">
+        <div class="eyebrow">Day 2 · Asset class</div>
+        <h3>Find your starting asset class</h3>
+        <p class="tool-sub">Six questions. Honest answers only. Routes you to the most appropriate path for your situation.</p>
+      </div>
+
+      <div id="quizContainer">
+        <div class="quiz-progress" id="quizProgress">Question 1 of 4</div>
+        <div class="quiz-question" id="quizQuestion">How much time can you realistically commit to learning each week?</div>
+        <div class="quiz-options" id="quizOptions"></div>
+      </div>
+
+      <div class="quiz-result" id="quizResult">
+        <div class="quiz-result-label">Your starting asset class</div>
+        <div class="quiz-result-name" id="quizResultName">ETFs</div>
+        <p class="quiz-result-desc" id="quizResultDesc">Diversified, low-cost, time-forgiving. The asset class with the strongest empirical case for beginners building long-term wealth.</p>
+        <button class="btn btn-ghost btn-sm" id="quizRestart" style="margin-top:1.25rem;">Take it again</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- AUTHOR / E-E-A-T -->
+<section class="container">
+  <div class="section-label">
+    <div class="section-label-num">05 / AUTHOR</div>
+    <div class="eyebrow">Who's behind this</div>
+  </div>
+  <h2 class="section-title display-lg">No fund manager. <span class="italic">An economics student</span> who reads the papers.</h2>
+  <p class="section-intro">Trading content is YMYL — Your Money Your Life. Google's quality framework demands the author be visible and credentialed. Fair enough. Here is the author.</p>
+
+  <div class="author-section">
+    <div class="author-portrait">
+      <svg viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="38" r="16" stroke="#D4A574" stroke-width="1.5"/>
+        <path d="M20 90 Q 50 60 80 90" stroke="#D4A574" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    <div>
+      <h3 class="display-md" style="margin-bottom:1rem;">Budkhuu "Bobby" Demberel</h3>
+      <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.65; max-width: 56ch;">
+        Third-semester B.Sc. Economics at Freie Universität Berlin. Originally from Mongolia; multilingual (Mongolian, Russian, German, English). Founder of the youth NGO MYMON. I am writing this site because every "trading guru" course I evaluated as a beginner was structurally designed to extract money from beginners — and I have an econometrics syllabus that demands I do better than that.
+      </p>
+
+      <div class="author-credentials">
+        <div class="credential">
+          <div class="credential-key">Studies</div>
+          <div class="credential-val">B.Sc. Volkswirtschaftslehre · Freie Universität Berlin</div>
+        </div>
+        <div class="credential">
+          <div class="credential-key">Languages</div>
+          <div class="credential-val">Mongolian (native) · Russian (C2) · German (C1, telc) · English (C1)</div>
+        </div>
+        <div class="credential">
+          <div class="credential-key">Awards</div>
+          <div class="credential-val">National Russian Language Olympiad · 1st place, Mongolia · 50% merit scholarship</div>
+        </div>
+        <div class="credential">
+          <div class="credential-key">Disclosure</div>
+          <div class="credential-val">Not a licensed advisor. No paid signals. No affiliate course funnel.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="container">
+  <div class="section-label">
+    <div class="section-label-num">06 / FAQ</div>
+    <div class="eyebrow">Honest answers</div>
+  </div>
+  <h2 class="section-title display-lg" style="text-align:center; margin-inline:auto;">Questions you should be asking.</h2>
+
+  <div class="faq" style="margin-top:3rem;">
+    <div class="faq-item">
+      <button class="faq-question">Is this financial advice?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>No. This is education. The author is not a licensed financial advisor and nothing on this site constitutes a recommendation to buy, sell, or hold any financial instrument. Decisions are yours alone.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do I need money to start?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>No. The entire 7-day roadmap is executed on a free demo account with virtual money. You should not deposit real capital until your demo metrics meet the graduation criteria defined on Day 7.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How realistic is "earning $100 in a week"?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>Honestly? Not very. Anyone promising sustainable real-money profits in seven days is selling something. What is realistic in week one is everything this roadmap delivers: open a demo account, execute one documented paper trade, and write a trading plan. Real $100 profits typically take two to six months of disciplined demo work followed by careful live trading.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What broker should I use?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>The roadmap reviews EU-friendly options (Trade Republic, Scalable Capital, Interactive Brokers, DEGIRO, eToro). The non-negotiable criterion is regulation by a recognised authority — BaFin, FCA, AMF, CONSOB, or CySEC. Verify license numbers on the regulator's website yourself before depositing.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Why is this free?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>Because the alternative — selling beginner courses for €497 — is the exact business model this site exists to argue against. The author may, in future, add a paid advanced track. The 7-day roadmap will remain free indefinitely.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Will my email be sold or shared?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>No. Your email receives the seven-day drip and (if you opt in) a weekly newsletter. It is not shared with third parties beyond the email service provider (Resend) required to deliver messages. GDPR-compliant; unsubscribe in one click.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">I've tried trading before and lost money. Is this for me?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>Especially for you. Most beginners learn the right lessons after losing the wrong amount of money. This roadmap is the lesson without the loss — but only if you commit to staying in demo until your metrics actually justify going live.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Is the content available in German?<span class="faq-toggle">+</span></button>
+      <div class="faq-answer"><p>The German version is in development. The author is C1 in German and is translating each module after the English version stabilises. Subscribe to be notified when the German track launches.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta" class="final-cta container">
+  <div class="eyebrow" style="margin-bottom:1.25rem;">Free · Seven days · One email per day</div>
+  <h2 class="display-lg">Start the slow path to real trading skill.</h2>
+  <p>One short lesson and one concrete action per day, delivered via email. Unsubscribe in one click. Day 1 arrives in your inbox within 60 seconds of signup.</p>
+
+  <form class="signup-form" id="signupForm" novalidate>
+    <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+    <button type="submit" class="btn btn-primary">Send me Day 1 <span class="arrow">→</span></button>
+  </form>
+  <p class="signup-disclaimer">By signing up you agree to the privacy policy. No spam. No upsells.</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="container">
+    <div class="risk-disclosure">
+      <strong>Risk disclosure.</strong> Trading derivatives, forex, equities, and ETFs involves substantial risk of loss and is not suitable for all investors. Past performance does not guarantee future results. According to ESMA, 74–89% of retail CFD trading accounts lose money. This site provides educational content and does not constitute investment advice. You are solely responsible for your trading decisions.
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#" class="brand">
+          <span class="brand-mark">S</span>
+          <span>Slow Capital</span>
+        </a>
+        <p class="footer-tagline italic">The slow path to real trading skill — built without anything to sell you.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#learn">Forex</a></li>
+          <li><a href="#learn">ETFs</a></li>
+          <li><a href="#learn">Stocks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <ul>
+          <li><a href="#tools">Position Size</a></li>
+          <li><a href="#tools">Asset Quiz</a></li>
+          <li><a href="#">Glossary</a></li>
+          <li><a href="#">App reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Risk disclosure</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Slow Capital · Berlin</div>
+      <div>Made with discipline, not hype.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- DAY MODAL -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-eyebrow" id="modalEyebrow">Day 1 · Foundations</div>
+    <h3 id="modalTitle">How markets actually work</h3>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- STICKY RISK BANNER -->
+<div class="sticky-banner" id="riskBanner">
+  <div class="sticky-banner-text">
+    <strong>Risk warning.</strong> Educational content only — not financial advice. Trading carries substantial risk of loss. Per ESMA, 74–89% of retail CFD accounts lose money.
+  </div>
+  <button class="btn btn-ghost btn-sm" id="dismissBanner">I understand</button>
+</div>
+
+<script>
+  // ---------- POSITION SIZE CALCULATOR ----------
+  const calcInputs = ['acct', 'risk', 'entry', 'stop'].map(id => document.getElementById(id));
+  const fmt = (n) => isFinite(n) ? '€' + n.toLocaleString('en-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '—';
+
+  function calc() {
+    const account = parseFloat(calcInputs[0].value) || 0;
+    const riskPct = parseFloat(calcInputs[1].value) || 0;
+    const entry = parseFloat(calcInputs[2].value) || 0;
+    const stop = parseFloat(calcInputs[3].value) || 0;
+    const maxLoss = account * (riskPct / 100);
+    const stopDist = Math.abs(entry - stop);
+    const posSize = stopDist > 0 ? maxLoss / stopDist : 0;
+    const exposure = posSize * entry;
+
+    document.getElementById('maxLoss').textContent = fmt(maxLoss);
+    document.getElementById('stopDist').textContent = fmt(stopDist);
+    document.getElementById('posSize').textContent = isFinite(posSize) ? posSize.toLocaleString('en-DE', {maximumFractionDigits: 2}) + ' units' : '—';
+    document.getElementById('exposure').textContent = fmt(exposure);
+  }
+  calcInputs.forEach(i => i.addEventListener('input', calc));
+  calc();
+
+  // ---------- ASSET CLASS QUIZ ----------
+  const quizQuestions = [
+    {
+      q: "How much time can you realistically commit to learning each week?",
+      opts: [
+        { t: "Under 2 hours — I have a busy life", v: { etf: 3, stk: 1, fx: 0 } },
+        { t: "2–5 hours — I'm seriously interested", v: { etf: 2, stk: 3, fx: 1 } },
+        { t: "5+ hours — I want to go deep", v: { etf: 1, stk: 2, fx: 3 } }
+      ]
+    },
+    {
+      q: "What is your time horizon for results?",
+      opts: [
+        { t: "Years — I'm building long-term wealth", v: { etf: 3, stk: 2, fx: 0 } },
+        { t: "Months — I want to see meaningful growth this year", v: { etf: 2, stk: 3, fx: 1 } },
+        { t: "Weeks — I want active trading and fast feedback", v: { etf: 0, stk: 1, fx: 3 } }
+      ]
+    },
+    {
+      q: "How would you respond to losing 10% of your capital in a single day?",
+      opts: [
+        { t: "I would be deeply shaken — I cannot afford that", v: { etf: 3, stk: 1, fx: 0 } },
+        { t: "Uncomfortable but manageable — part of the game", v: { etf: 2, stk: 3, fx: 2 } },
+        { t: "Acceptable risk for the upside", v: { etf: 0, stk: 1, fx: 3 } }
+      ]
+    },
+    {
+      q: "What interests you more?",
+      opts: [
+        { t: "Building wealth over decades with minimal effort", v: { etf: 3, stk: 1, fx: 0 } },
+        { t: "Researching companies, sectors, and economic trends", v: { etf: 1, stk: 3, fx: 1 } },
+        { t: "The mechanics of price movement and short-term action", v: { etf: 0, stk: 1, fx: 3 } }
+      ]
+    }
+  ];
+
+  const results = {
+    etf: {
+      name: "ETFs",
+      desc: "Diversified, low-cost, time-forgiving. The asset class with the strongest empirical case for beginners building long-term wealth. Start here, master the discipline, and add complexity later only if your situation truly demands it."
+    },
+    stk: {
+      name: "Stocks",
+      desc: "Ownership of real companies. Your returns come from price appreciation and dividends. Reward patience and research; punish overtrading. A sound choice if you are willing to read annual reports and ignore daily noise."
+    },
+    fx: {
+      name: "Forex",
+      desc: "The deepest, fastest market in the world — and the most punishing for beginners. Suitable only if you commit to strict risk management and 3–6 months on demo before any real capital. Read every word of Day 5 twice."
+    }
+  };
+
+  let currentQ = 0;
+  let scores = { etf: 0, stk: 0, fx: 0 };
+
+  function renderQuestion() {
+    const Q = quizQuestions[currentQ];
+    document.getElementById('quizProgress').textContent = `Question ${currentQ + 1} of ${quizQuestions.length}`;
+    document.getElementById('quizQuestion').textContent = Q.q;
+    const optsEl = document.getElementById('quizOptions');
+    optsEl.innerHTML = '';
+    Q.opts.forEach((opt, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'quiz-option';
+      btn.innerHTML = `<span class="quiz-option-letter">${String.fromCharCode(65 + i)}</span><span>${opt.t}</span>`;
+      btn.addEventListener('click', () => {
+        scores.etf += opt.v.etf;
+        scores.stk += opt.v.stk;
+        scores.fx += opt.v.fx;
+        currentQ++;
+        if (currentQ < quizQuestions.length) {
+          renderQuestion();
+        } else {
+          showResult();
+        }
+      });
+      optsEl.appendChild(btn);
+    });
+  }
+
+  function showResult() {
+    const top = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+    const r = results[top];
+    document.getElementById('quizResultName').textContent = r.name;
+    document.getElementById('quizResultDesc').textContent = r.desc;
+    document.getElementById('quizContainer').style.display = 'none';
+    document.getElementById('quizResult').classList.add('show');
+  }
+
+  document.getElementById('quizRestart').addEventListener('click', () => {
+    currentQ = 0;
+    scores = { etf: 0, stk: 0, fx: 0 };
+    document.getElementById('quizContainer').style.display = 'block';
+    document.getElementById('quizResult').classList.remove('show');
+    renderQuestion();
+  });
+
+  renderQuestion();
+
+  // ---------- FAQ ----------
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+
+  // ---------- DAY MODAL ----------
+  const dayContent = {
+    1: { eyebrow: "Day 1 · Foundations", title: "How markets actually work", body: `
+      <p>A financial market is a coordination mechanism. The price you see is not a fact about the asset's value — it is a snapshot of the most recent agreement between one buyer and one seller.</p>
+      <p><strong>Three concepts every chart hides:</strong></p>
+      <ul>
+        <li><strong>Bid</strong> — the highest price a buyer will currently pay</li>
+        <li><strong>Ask</strong> — the lowest price a seller will currently accept</li>
+        <li><strong>Spread</strong> — the gap between them; your immediate transaction cost</li>
+      </ul>
+      <p><strong>Today's action:</strong> Open any chart of EUR/USD on TradingView. Identify the bid, ask, and spread. Watch them update for two minutes.</p>
+    `},
+    2: { eyebrow: "Day 2 · Choose", title: "Pick your asset class", body: `
+      <p>The single most important decision in your trading career is which asset class you choose to learn first. Get this wrong and every subsequent skill you build sits on the wrong foundation.</p>
+      <p><strong>Order of difficulty (easiest to hardest):</strong> ETFs → Stocks → Forex. Most successful retail traders spent year one in the first two and only added Forex once they had a verified record of disciplined behaviour.</p>
+      <p><strong>Today's action:</strong> Take the asset class quiz on the homepage. Read the dedicated guide for your result.</p>
+    `},
+    3: { eyebrow: "Day 3 · Open", title: "A regulated demo account", body: `
+      <p>A regulated broker operates under supervision of a national authority. In the EU, that means BaFin, FCA, CySEC, AMF, or CONSOB. Regulation gives you segregated client funds, deposit protection, and a complaints process.</p>
+      <p><strong>Rule:</strong> if a broker's marketing emphasises high leverage and bonuses but you have to dig to find their license number, walk away.</p>
+      <p><strong>Today's action:</strong> Open one demo account. Place one test trade. Verify it appears in your history. Screenshot it.</p>
+    `},
+    4: { eyebrow: "Day 4 · Read", title: "Charts, with intent", body: `
+      <p>You do not need to memorise sixty candlestick patterns. You need three: bullish engulfing, bearish engulfing, and doji. The rest is noise.</p>
+      <p><strong>Trend:</strong> uptrend (higher highs and higher lows), downtrend (lower highs and lower lows), or range. Do not trade against the trend on your chosen time frame.</p>
+      <p><strong>Time frame:</strong> default to the daily chart for analysis and the 4-hour chart for entry timing. Lower time frames produce more noise per unit of signal.</p>
+      <p><strong>Today's action:</strong> Annotate a daily chart with two support zones, two resistance zones, and the current trend.</p>
+    `},
+    5: { eyebrow: "Day 5 · Protect", title: "Risk management — the most important day", body: `
+      <p><strong>The 1% rule:</strong> never risk more than 1% of your account on a single trade. Not advice — operating constraint.</p>
+      <p><strong>Position size formula:</strong> Position = (Account × Risk %) ÷ Stop-loss distance.</p>
+      <p>Example: €1,000 account, 1% risk = €10 max loss. Entry €50, stop €48 = €2 stop distance. Position size = 5 shares.</p>
+      <p><strong>Today's action:</strong> Use the Position Size Calculator on the homepage. Internalise the formula. Never enter another trade without it.</p>
+    `},
+    6: { eyebrow: "Day 6 · Execute", title: "Your first paper trade", body: `
+      <p>One well-documented trade today beats ten impulsive ones. Quality over quantity.</p>
+      <p><strong>Thesis template (write before entering):</strong></p>
+      <ul>
+        <li><strong>Setup</strong> — what condition do I observe?</li>
+        <li><strong>Trigger</strong> — what specific event causes me to enter?</li>
+        <li><strong>Invalidation</strong> — what proves the thesis wrong?</li>
+      </ul>
+      <p><strong>Today's action:</strong> Execute one demo trade following the full process: thesis → calculation → bracket order with stop and target → journal entry.</p>
+    `},
+    7: { eyebrow: "Day 7 · Plan", title: "Your real-money trading plan", body: `
+      <p>Unwritten rules are not rules. The act of writing forces specificity, and specificity is the difference between a plan and a wish.</p>
+      <p><strong>The honest reality of the first $100:</strong> earning your first $100 in profit, sustainably, typically takes 2–6 months of disciplined demo trading followed by careful live trading. Anyone promising faster is selling you something.</p>
+      <p><strong>Graduation criteria (demo → live):</strong> 50+ demo trades, win rate ≥ 40%, average risk-reward ≥ 1:2, journal with one lesson per trade, plan followed exactly for four consecutive weeks.</p>
+      <p><strong>Today's action:</strong> Complete the trading plan template. Save it. Re-read it weekly for the next month.</p>
+    `}
+  };
+
+  const modal = document.getElementById('modal');
+  document.querySelectorAll('.day').forEach(d => {
+    d.addEventListener('click', () => {
+      const day = d.dataset.day;
+      const c = dayContent[day];
+      document.getElementById('modalEyebrow').textContent = c.eyebrow;
+      document.getElementById('modalTitle').textContent = c.title;
+      document.getElementById('modalBody').innerHTML = c.body;
+      modal.classList.add('show');
+    });
+  });
+  document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('show'));
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('show'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.remove('show'); });
+
+  // ---------- SIGNUP STUB ----------
+  document.getElementById('signupForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = e.target.querySelector('input');
+    if (!input.value || !input.value.includes('@')) return;
+    e.target.innerHTML = '<div style="color:var(--accent-warm); font-family:var(--display); font-size:1.5rem; padding:1rem;">Day 1 is on its way to ' + input.value + '. Check your inbox.</div>';
+  });
+
+  // ---------- RISK BANNER DISMISS ----------
+  document.getElementById('dismissBanner').addEventListener('click', () => {
+    document.getElementById('riskBanner').classList.add('hide');
+  });
+
+  // ---------- REVEAL ON LOAD ----------
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  });
+
+  // ---------- INTERSECTION REVEAL FOR LOWER SECTIONS ----------
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section').forEach(s => {
+    s.classList.add('reveal');
+    io.observe(s);
+  });
+</script>
+</body>
+</html>
